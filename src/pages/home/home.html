@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Order</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row>
+        <ion-col>
+          <div width="80%">
+              <ion-item>
+                  Select Drink
+              </ion-item>
+              <ion-select [(ngModel)]="drink" width="100%">
+                <ion-option value="coffee">Coffee</ion-option>
+                <ion-option value="tea">Tea</ion-option>
+                <ion-option value="soda">Soda</ion-option>
+              </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf='drink != ""'>
+          <ion-col>
+            <div width="80%">
+              <ion-item>
+                Select Type
+            </ion-item>
+            <ion-select *ngIf='drink == "coffee"' width="100%">
+              <ion-option value="coffee">Black</ion-option>
+              <ion-option value="tea">Arabic</ion-option>
+              <ion-option value="soda">Latte</ion-option>
+              <ion-option value="water">Cappucino</ion-option>
+            </ion-select>
+
+            <ion-select *ngIf='drink == "tea"' width="100%">
+                <ion-option value="coffee">Green</ion-option>
+                <ion-option value="tea">Earl Grey</ion-option>
+                <ion-option value="soda">Herbal</ion-option>
+                <ion-option value="water">Oolong</ion-option>
+              </ion-select>
+
+              <ion-select *ngIf='drink == "soda"' width="100%">
+                  <ion-option value="coffee">Coca Cola</ion-option>
+                  <ion-option value="tea">Pepsi</ion-option>
+                  <ion-option value="soda">Ice Tea</ion-option>
+                  <ion-option value="water">Water</ion-option>
+                </ion-select>
+            </div>
+            
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col *ngIf="drink != soda" >
+            <div width="80%">
+              <ion-item>
+                Select Addition
+            </ion-item>
+            <ion-select width="100%">
+              <ion-option value="coffee">Sugar</ion-option>
+              <ion-option value="tea">Milk</ion-option>
+              <ion-option value="soda">Sugar &amp; Milk</ion-option>
+            </ion-select>
+
+            <ion-item>
+                Add to favorites
+                <ion-icon item-end class="addicon" name="add-circle" (click)="addNewGroup()" padding></ion-icon>
+                
+                </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+        
+          <ion-col>
+            <div width="80%">
+              <ion-item>
+                Select from favorites
+            </ion-item>
+            <ion-select width="100%">
+              <ion-option value="coffee">Coffee, Cappucino, Sugar</ion-option>
+              <ion-option value="tea">Tea, Oolong, Milk &amp; Sugar</ion-option>
+              <ion-option value="soda">Soda, Coca Cola</ion-option>
+            </ion-select>
+            </div>
+          </ion-col>
+        </ion-row>
+  
+        <ion-row>
+            <ion-col class="signup-col">
+              <button ion-button class="submit-btn" full type="submit" >Order!</button>
+              
+            </ion-col>
+          </ion-row>
+</ion-content>
