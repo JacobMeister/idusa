@@ -12,6 +12,21 @@
         <ion-col>
           <div width="80%">
               <ion-item>
+                  Select Group
+              </ion-item>
+              <ion-select  width="100%">
+                <ion-option value="Avans">Avans</ion-option>
+                <ion-option value="tea">SAP</ion-option>
+                <ion-option value="soda">Pink Elephant</ion-option>
+              </ion-select>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <div width="80%">
+              <ion-item>
                   Select Drink
               </ion-item>
               <ion-select [(ngModel)]="drink" width="100%">
@@ -53,8 +68,8 @@
             
           </ion-col>
         </ion-row>
-        <ion-row>
-          <ion-col *ngIf="drink != soda" >
+        <ion-row *ngIf='drink == "coffee" || drink == "tea"'>
+          <ion-col >
             <div width="80%">
               <ion-item>
                 Select Addition
@@ -92,6 +107,9 @@
   
         <ion-row>
             <ion-col class="signup-col">
+                <ion-item>
+                    The next victim will be chosen in 13 minutes
+                </ion-item>
               <button ion-button class="submit-btn" full type="submit" >Order!</button>
               
             </ion-col>

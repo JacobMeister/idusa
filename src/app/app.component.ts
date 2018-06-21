@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { ProfilePage } from '../pages/profile/profile';
+import { JobsPage } from '../pages/jobs/jobs';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
       { title: 'Order', component: HomePage },
       { title: 'Group List', component: ListPage },
       { title: 'Favorites', component: FavoritesPage },
+      { title: 'Jobs', component: JobsPage},
       { title: 'Profile', component: ProfilePage }
     ];
 

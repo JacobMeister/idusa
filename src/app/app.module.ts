@@ -15,6 +15,8 @@ import { CreateNewPage } from '../pages/create-new/create-new';
 import { AddNewUserPage } from '../pages/add-new-user/add-new-user';
 import { Camera } from '@ionic-native/camera';
 import { ProfilePage } from '../pages/profile/profile';
+import { JobsPage } from '../pages/jobs/jobs';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ProfilePage } from '../pages/profile/profile';
     FavoritesPage,
     CreateNewPage,
     AddNewUserPage,
-    ProfilePage
+    ProfilePage,
+    JobsPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { ProfilePage } from '../pages/profile/profile';
     FavoritesPage,
     CreateNewPage,
     AddNewUserPage,
-    ProfilePage
+    ProfilePage,
+    JobsPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
